@@ -1,0 +1,18 @@
+{
+  "name": "ZillowWorm",
+  "description": "Scrape Zillow",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [ {
+    "js": [ "onload.js" ],
+    "run_at": "document_start",
+    "matches": [ "\u003Call_urls>" ]
+  } ],
+  "permissions": [ "webRequest", "\u003Call_urls>" ],
+  "browser_action": {"default_popup": "popup.html"},
+  "manifest_version": 2
+}
